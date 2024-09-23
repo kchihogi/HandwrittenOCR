@@ -1,0 +1,16 @@
+find_path(Tesseract_INCLUDE_DIR tesseract/baseapi.h)
+find_library(Tesseract_LIBRARIES NAMES tesseract)
+
+if (Tesseract_INCLUDE_DIR AND Tesseract_LIBRARIES)
+    set(Tesseract_FOUND TRUE)
+else()
+    set(Tesseract_FOUND FALSE)
+endif()
+
+if (Tesseract_FOUND)
+    message(STATUS "Found Tesseract")
+    set(Tesseract_LIBS ${Tesseract_LIBRARIES})
+    set(Tesseract_INCLUDE_DIRS ${Tesseract_INCLUDE_DIR})
+else()
+    message(FATAL_ERROR "Could not find Tesseract")
+endif()
