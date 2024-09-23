@@ -1,0 +1,27 @@
+{
+    "name": "HandwrittenOCR DevContainer",
+    "dockerComposeFile": [
+        "../docker-compose.yml"
+    ],
+    "service": "backend_service",
+    "workspaceFolder": "/app",
+    "customizations": {
+        "vscode": {
+            "workbench.colorTheme": "Cobalt2",
+            "editor.formatOnSave": true,
+            "editor.renderWhitespace": "all",
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-python.python",
+                "ms-vscode.cmake-tools",
+                "GitHub.copilot",
+                "yzhang.markdown-all-in-one",
+                "ms-python.pylint",
+                "ms-python.flake8",
+                "esbenp.prettier-vscode",
+                "eamodio.gitlens",
+                "coenraads.bracket-pair-colorizer"
+            ]
+        }
+    }
+}

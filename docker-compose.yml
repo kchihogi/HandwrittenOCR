@@ -1,0 +1,14 @@
+version: '3'
+services:
+  backend_service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /app
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - /app/venv
+      - /app/ocr_module/build
+    command: ["uvicorn", "backend.src.app:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
